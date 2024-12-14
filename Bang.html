@@ -12,7 +12,22 @@
     <div class = "container">
 
     <!--This is the title for the page-->
-    <div class="title-bar">Bang Metric Calculator</div>    <!--end of title section-->
+    <div class="title-bar">Bang Metric Calculator
+
+            <button class = "HelpButton" onclick="openHelp()">?</button>
+    </div>    <!--end of title section-->
+
+    <!--Help Box-->
+    <div class="help-box" id="helpBox">
+        <div class="help-header">
+            <span>Help Information</span>
+            <button class="close-button" onclick="closeHelp()">X</button>
+        </div>
+        <div class="help-content">
+            <p>This is a placeholder for help information. You can add any instructions or documentation here for users.</p>
+        </div>
+    </div>
+        <script src = "Bang.js"></script>
 
 
     <!--Buttons-->
@@ -37,35 +52,51 @@
 <div class="field-group">
 
     <label for="functional-primitives">Functional Primitives</label>
-    <input type="number" id="functional-primitives" name="functional-primitives" placeholder="Enter value">
+    <input type="number" id="functional-primitives" name="functional-primitives" placeholder="Enter value" min="0">
 
     <label for="data-elements">Data Elements</label>
-    <input type="number" id="data-elements" name="data-elements" placeholder="Enter value">
+    <input type="number" id="data-elements" name="data-elements" placeholder="Enter value" min="0">
 
     <label for="objects">Objects</label>
-    <input type="number" id="objects" name="objects" placeholder="Enter value">
+    <input type="number" id="objects" name="objects" placeholder="Enter value" min="0">
 
     <label for="relationships">Relationships</label>
-    <input type="number" id="relationships" name="relationships" placeholder="Enter value">
+    <input type="number" id="relationships" name="relationships" placeholder="Enter value" min="0">
 
     <label for="states">States</label>
-    <input type="number" id="states" name="states" placeholder="Enter value">
+    <input type="number" id="states" name="states" placeholder="Enter value" min="0">
 
     <label for="transitions">Transitions</label>
-    <input type="number" id="transitions" name="transitions" placeholder="Enter value">
+    <input type="number" id="transitions" name="transitions" placeholder="Enter value" min="0">
 
     <label for="relationship-connections">Relationship Connections</label>
-    <input type="number" id="relationship-connections" name="relationship-connections" placeholder="Enter value">
+    <input type="number" id="relationship-connections" name="relationship-connections" placeholder="Enter value" min="0">
 
     <label for="input-data-elements">Input Data Elements</label>
-    <input type="number" id="input-data-elements" name="input-data-elements" placeholder="Enter value">
+    <input type="number" id="input-data-elements" name="input-data-elements" placeholder="Enter value" min="0">
 
     <label for="output-data-elements">Output Data Elements</label>
-    <input type="number" id="output-data-elements" name="output-data-elements" placeholder="Enter value">
+    <input type="number" id="output-data-elements" name="output-data-elements" placeholder="Enter value" min="0"> 
 
     <label for="retained-data-elements">Retained Data Elements</label>
-    <input type="number" id="retained-data-elements" name="retained-data-elements" placeholder="Enter value">
+    <input type="number" id="retained-data-elements" name="retained-data-elements" placeholder="Enter value" min="0">
 </div><!--end of input field-->
+
+<div class = "ResultContainer">
+
+    <h3>Results:</h3>
+        <p><strong>Bang Score: </strong> <span id = "bangScore">0</span></p>
+        <p><strong>Classification:</strong> <span id="classification">N/A</span></p>
+
+</div>
+
+
+
+</div>
+
+
+
+
 
 
     
