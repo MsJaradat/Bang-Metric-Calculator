@@ -1,3 +1,12 @@
+body {
+  background-color: #f5f5dc; /* Light beige */
+  color: #333;              /* Dark gray text */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
 .container {
 
   max-width: 1200px; 
@@ -17,7 +26,21 @@
     border-bottom: 2px solid #ccc;
     
   }
-  
+
+
+  .button-column {
+    position: absolute;          
+    bottom: 15px;                   
+    left: 15px;                 
+    background-color: darkgoldenrod; 
+    padding: 20px;               
+    border-radius: 10px;        
+    display: flex;              
+    flex-direction: column;      
+    gap: 15px;                
+    width: 150px;                
+  }
+
   button {
     /* Variables */
     --button_radius: 0.5em;
@@ -52,5 +75,24 @@
     /* Push the button downwards when pressed */
     transform: translateY(0);
   }
+
+.field-group{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 20px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f5f5dc;
+  box-shadow: #000000;
+}
+
+
+
+  
+
+
+
+
   
 
